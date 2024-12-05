@@ -1,0 +1,41 @@
+.MainKub{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 50px;
+}
+
+.Kub{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.Kub-img{
+    width: 250px;
+    height: 250px;
+}
+
+.Kub-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 15px   ;
+}
+button{
+    width: 130px;
+    height: 50px;
+    background: rgb(0,255,149);
+    background: linear-gradient(90deg, rgba(0,255,149,1) 1%, rgba(3,193,204,1) 100%);
+    border-radius: 25px;
+    border: 1px solid white;
+    transition: ease 0.8s;
+}
+
+button:hover{
+    background: rgb(53, 170, 135);
+    color: white;
+}
