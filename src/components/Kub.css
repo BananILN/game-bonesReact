@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(139, 138, 138);
+}
 .MainKub{
 display: flex;
 flex-direction: column;
@@ -24,6 +27,7 @@ flex-wrap: wrap;
     align-items: center;
     justify-content: center; 
     gap: 15px   ;
+    margin: 10px;
 }
 button{
     width: 130px;
