@@ -6,11 +6,15 @@ export default function Kub({images}){
     const btn = document.getElementById("#btn");
 
     const [currentImage, setCurrentImage] = useState(images[0]);
+    const [currentNumber, setCurrentNumber] = useState(1);
+    const [showLabel,setShowLabel] = useState(false);
     
 
     const rollDice = () =>{
         const randomInd = Math.floor(Math.random() * images.length);
-        setCurrentImage(images[randomInd])
+        setCurrentImage(images[randomInd]);
+        setCurrentNumber(randomInd + 1 );
+        setShowLabel(true);
     };
 
     const rollAgain = () =>{
@@ -28,9 +32,9 @@ export default function Kub({images}){
                     alt="Kub image"
                     />     
             </div>
-
+            {showLabel && <label>Выпал кубик номер {currentNumber}!</label>}
             <div className="Kub-btn">
-                    <button id="btn" onClick={rollDice}>Крутить</button>
+                    <button onClick={rollDice}>Крутить</button>
                     <button onClick={rollAgain}>Еще раз</button>
             </div>
             
